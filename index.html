@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="container wrapper">
+        <div class="row">
+            <div class="col wrapper2">
+                <h1>home</h1>
+                <input type="text" id="home" value="0">
+                <div class="mt-4">
+                    <button class="btn border border-white border-2 text-white" onclick="incrementHome(1)">+1</button>
+                    <button class="btn border border-white border-2 text-white" onclick="incrementHome(2)">+2</button>
+                    <button class="btn border border-white border-2 text-white" onclick="incrementHome(3)">+3</button>
+                </div>
+            </div>
+            <div class="col wrapper2">
+                <h1>guest</h1>
+                <input type="text" id="guest" value="0">
+                <div class="mt-4">
+                    <button class="btn border border-white border-2 text-white" onclick="incrementGuest(1)">+1</button>
+                    <button class="btn border border-white border-2 text-white" onclick="incrementGuest(2)">+2</button>
+                    <button class="btn border border-white border-2 text-white" onclick="incrementGuest(3)">+3</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function incrementHome(x){
+            let el = document.getElementById("home");
+            let numb = document.getElementById("home").value;
+            p = parseInt(numb);
+            p += x;
+            el.value = p;
+        }
+        function incrementGuest(x){
+            let el = document.getElementById("guest");
+            let numb = document.getElementById("guest").value;
+            var p = parseInt(numb);
+            p += x;
+            el.value = p;
+        }
+    </script>
+</body>
+</html>
